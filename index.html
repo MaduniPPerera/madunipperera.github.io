@@ -1,1 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <style>
+    :root {
+      --background: #121212;
+      --foreground: #ffffff;
+      --primary: #bb86fc;
+      --glass-bg: rgba(255, 255, 255, 0.1);
+      --glass-border: rgba(255, 255, 255, 0.15);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--background);
+      color: var(--foreground);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      width: 100%;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .glass-card {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 20px;
+      margin: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .glass-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    .toggle-button {
+      cursor: pointer;
+      background: none;
+      border: 1px solid var(--glass-border);
+      color: var(--foreground);
+      padding: 10px 20px;
+      border-radius: 50px;
+      transition: background-color 0.3s;
+    }
+
+    .toggle-button:hover {
+      background-color: var(--primary);
+      border-color: var(--primary);
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root {
+        --background: #f7f8fa;
+        --foreground: #121212;
+        --glass-bg: rgba(255, 255, 255, 0.6);
+        --glass-border: rgba(0, 0, 0, 0.1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Hello, I'm [Your Name]</h1>
+    <p>A passionate Web Developer & Cybersecurity Enthusiast</p>
+    <button class="toggle-button">Contact Me</button>
+  </header>
+
+  <section class="grid-container">
+    <div class="glass-card">
+      <h3>Project One</h3>
+      <p>Brief description of project one. Highlight your skills and technologies used.</p>
+    </div>
+    <div class="glass-card">
+      <h3>Project Two</h3>
+      <p>Brief description of project two. Highlight your skills and technologies used.</p>
+    </div>
+    <div class="glass-card">
+      <h3>Project Three</h3>
+      <p>Brief description of project three. Highlight your skills and technologies used.</p>
+    </div>
+  </section>
+
+  <footer class="glass-card" style="margin-top:40px;text-align:center;">
+    <p>&copy; 2025 Your Name | Built with ❤️ and passion</p>
+  </footer>
+
+  <script>
+    const button = document.querySelector('.toggle-button');
+    button.addEventListener('click', () => {
+      alert('You clicked Contact Me!');
+    });
+  </script>
+</body>
+</html>
 
